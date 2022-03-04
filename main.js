@@ -15,6 +15,10 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
+// this statement exports nothing. 
+// it is added to remove an error of block scoped variable
+// here 'message' is block-scoped so we can cannot redeclare it and it will generate an error.
+// to remove that error we added export{};  
 var message = 'Welcome back!';
 console.log(message);
 // Variable Declaration
@@ -24,13 +28,15 @@ var sum;
 var title = 'Codevolution';
 // Basic Variable Types
 var isBeginner = true;
+// here we are declaring data type of variable 'isBeginner' 
 var total = 0;
 var name = 'Vishwas';
-var sentence = "My name is ".concat(name, "\nI am a beginner in TypeScript");
+var sentence = "My name is ".concat(name, "I am a beginner in TypeScript");
 console.log(sentence);
-// Sub types
 var n = null;
 var u = undefined;
+// here null and undefined are also the types in typescript
+// here n, u are variable names 
 var isNew = null;
 var myName = undefined;
 // Array type
@@ -45,7 +51,11 @@ var Color;
     Color[Color["Green"] = 1] = "Green";
     Color[Color["Blue"] = 2] = "Blue";
 })(Color || (Color = {}));
-var c = Color.Green;
+// Enums stands for Enumerations. Enums are a new data type supported in TypeScript. It is used to define the set of named constants, i.e., a collection of related values. TypeScript supports both numeric and string-based enums. 
+// difference between enums and classes
+// An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
+// Array will hold same type of data while enum can hold different datatypes at a time. 
+var c = Color.Blue;
 console.log(c);
 // Any type
 var randomValue = 10;
